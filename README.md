@@ -34,6 +34,19 @@ Contains all the character designs and mappings
 
 A simple test program 
 
+**imap.py**
+
+This script displays your unread emails.
+
+**time.py**
+
+This script displays the current time.
+
+**btc.py**
+
+This script shows the current bitcoin rate in Euro. 
+
+
 Usage
 -----
 
@@ -51,14 +64,15 @@ unicorn_scroll('hello world','red',255,0.1)
 Special Symbols
 ---------------
 
-There are 3 special (non-keyboard) symbols available: a heart, a smilie and a degrees symbol.
-These are used by prefixing their 5 character name with a tilde (~).
+There are 6 special (non-keyboard) symbols available. These are used by prefixing their 5 character name with a tilde (~).
 
-For a smile use ~smilie
+- For a smile use ~smilie
+- For a heart use (you guessed it) ~heart
+- For a degrees use ~degrs (for best results, don't leave a space between the preceeding number and the symbol)
+- For a heart use letter use ~email
+- For a euro use ~euros
+- For a euro bitcon use ~bcoin
 
-For a heart use (you guessed it) ~heart
-
-For a degrees use ~degrs (for best results, don't leave a space between the preceeding number and the symbol)
 
 *example:*
 
