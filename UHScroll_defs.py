@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 '''This file contains all the letter designs as an 8x8 bitarray. 
 You can add your won by just folowing the same format. Don't forget to specify the character 
 to which it relates to in the mapping dictionary. 
@@ -442,6 +445,17 @@ x6= bitarray('00001100')
 x7= bitarray('00000000')
 symbol_dot=[x0,x1,x2,x3,x4,x5,x6,x7]
 
+# Symbol comma
+x0= bitarray('00000000')
+x1= bitarray('00000000')
+x2= bitarray('00000000')
+x3= bitarray('00000000')
+x4= bitarray('00000000')
+x5= bitarray('00001100')
+x6= bitarray('00001100')
+x7= bitarray('00000100')
+symbol_comma=[x0,x1,x2,x3,x4,x5,x6,x7]
+
 # Symbol at
 x0= bitarray('00000000')
 x1= bitarray('00111100')
@@ -518,6 +532,17 @@ x5= bitarray('00111100')
 x6= bitarray('00000000')
 x7= bitarray('00000000')
 symbol_equals=[x0,x1,x2,x3,x4,x5,x6,x7]
+
+# Symbol colon
+x0= bitarray('00000000')
+x1= bitarray('00001100')
+x2= bitarray('00001100')
+x3= bitarray('00000000')
+x4= bitarray('00000000')
+x5= bitarray('00001100')
+x6= bitarray('00001100')
+x7= bitarray('00000000')
+symbol_colon=[x0,x1,x2,x3,x4,x5,x6,x7]
 
 # Symbol dollar
 x0= bitarray('00000000')
@@ -597,7 +622,7 @@ x6= bitarray('00001100')
 x7= bitarray('00000000')
 symbol_lt=[x0,x1,x2,x3,x4,x5,x6,x7]
 
-# Special hart
+# Special heart
 x0= bitarray('00000000')
 x1= bitarray('01100110')
 x2= bitarray('11111111')
@@ -606,7 +631,7 @@ x4= bitarray('11111111')
 x5= bitarray('01111110')
 x6= bitarray('00111100')
 x7= bitarray('00011000')
-special_hart=[x0,x1,x2,x3,x4,x5,x6,x7]
+special_heart=[x0,x1,x2,x3,x4,x5,x6,x7]
 
 # Special smilie
 x0= bitarray('00111100')
@@ -629,6 +654,39 @@ x5= bitarray('00000000')
 x6= bitarray('00000000')
 x7= bitarray('00000000')
 special_degrees=[x0,x1,x2,x3,x4,x5,x6,x7]
+
+# Special mail
+x0= bitarray('00000000')
+x1= bitarray('11111111')
+x2= bitarray('10000001')
+x3= bitarray('11000011')
+x4= bitarray('10100101')
+x5= bitarray('10011001')
+x6= bitarray('10000001')
+x7= bitarray('11111111')
+special_mail=[x0,x1,x2,x3,x4,x5,x6,x7]
+
+# Special euro
+x0= bitarray('00000000')
+x1= bitarray('00011100')
+x2= bitarray('00100000')
+x3= bitarray('01111000')
+x4= bitarray('01111000')
+x5= bitarray('00100000')
+x6= bitarray('00011100')
+x7= bitarray('00000000')
+special_euro=[x0,x1,x2,x3,x4,x5,x6,x7]
+
+# Special bitcoin
+x0= bitarray('00010000')
+x1= bitarray('01111000')
+x2= bitarray('00100100')
+x3= bitarray('00111000')
+x4= bitarray('00100100')
+x5= bitarray('00100100')
+x6= bitarray('01111000')
+x7= bitarray('00010000')
+special_bitcoin=[x0,x1,x2,x3,x4,x5,x6,x7]
 
 '''The mapping dictionary is called to translate a character from the message to be displayed
 into the relevant bitarray'''
@@ -672,6 +730,7 @@ mapping['8'] = number_8
 mapping['9'] = number_9
 mapping['@'] = symbol_at
 mapping['.'] = symbol_dot
+mapping[','] = symbol_comma
 mapping['-'] = symbol_hyph
 mapping['?'] = symbol_qm
 mapping['!'] = symbol_em
@@ -680,6 +739,7 @@ mapping['_'] = symbol_under
 mapping['#'] = symbol_hash
 mapping['+'] = symbol_plus
 mapping['='] = symbol_equals
+mapping[':'] = symbol_colon
 
 mapping['$'] = symbol_dollar
 mapping['"'] = symbol_dbq
@@ -688,17 +748,19 @@ mapping['('] = symbol_ob
 mapping['*'] = symbol_ast
 mapping['>'] = symbol_gt
 mapping['<'] = symbol_lt
-mapping['heart'] = special_hart
-mapping['smile'] = special_smilie
-mapping['degrs'] = special_degrees
-
+mapping['heart'] = 	special_heart
+mapping['smile'] = 	special_smilie
+mapping['degrs'] = 	special_degrees
+mapping['email'] = 	special_mail
+mapping['euros'] = 	special_euro
+mapping['bcoin'] = special_bitcoin
 
 '''Characters are normally 4x6 high although some (e.g m, w) are wider and others are narrower 
 (e.g. !, I, J). In order for these to be proiperly spaced in a word (i.e seperated by 2 blank columns,
 any additional wide or narrow letters must be added to the appropriate list)'''
 
 narrows = [symbol_plus,letter_I,letter_J,letter_T,symbol_em, symbol_ob, symbol_cb,symbol_plus]
-super_narrow = [letter_space,special_degrees]
-wides = [letter_M,letter_W,symbol_ast,symbol_hash,special_smilie, special_hart]
-super_wides = [special_smilie, special_hart]
-specials = ['~heart','~smile','~degrs']
+super_narrow = [letter_space,special_degrees,symbol_comma,symbol_colon]
+wides = [letter_M,letter_W,symbol_ast,symbol_hash,special_smilie,special_euro,special_bitcoin]
+super_wides = [special_smilie,special_heart,special_mail]
+specials = ['~heart','~smile','~degrs','~email','~euros','~bcoin',]
