@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 #V1.01
 ''' This python script provides the functions to display simple scrolling text on
 a Pimoroni Unicorn hat, and add-on board for the Raspberry Pi model B+'''
