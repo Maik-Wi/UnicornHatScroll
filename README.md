@@ -46,6 +46,10 @@ This script displays the current time.
 
 This script shows the current bitcoin rate in Euro. 
 
+**btc-ticker.py**
+
+This script repeatedly displays the current bitcoin price. 
+
 
 Usage
 -----
